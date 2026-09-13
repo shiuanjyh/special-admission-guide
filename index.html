@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>大學特殊選才落點探索與數據導航 (112～114學年度)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 頂部導航欄 -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-icon">特</div>
+        <div>
+          <div class="brand-title">大學特殊選才落點探索與數據導航</div>
+          <div class="brand-subtitle">112～114 學年度全台指標校系名額、歷年重要日程推估與甄選策略</div>
+        </div>
+      </div>
+      <div class="nav-actions">
+        <button class="btn btn-outline" id="btn-view-schedule" style="background: #eff6ff; color: #1e40af; border-color: #bfdbfe;">
+          📅 歷年重要日程與推估
+        </button>
+        <button class="btn btn-outline" id="btn-view-compare">
+          ⚖️ 橫向對比 (<span id="compare-count">0</span>)
+        </button>
+        <button class="btn btn-outline" id="btn-view-bookmarks">
+          ★ 志願收藏 (<span id="bookmark-count">0</span>)
+        </button>
+        <button class="btn btn-outline" id="btn-export-data" title="匯出個人條件設定與收藏志願">
+          📤 匯出
+        </button>
+        <button class="btn btn-outline" id="btn-import-trigger" title="匯入已儲存之設定檔">
+          📥 匯入
+        </button>
+        <input type="file" id="file-import" accept=".json" style="display: none;">
+      </div>
+    </div>
+  </nav>
+
+  <!-- 主畫面配置 -->
+  <main class="main-layout">
+    
+    <!-- 左側：個人條件與偏才背景設定 -->
+    <aside class="matcher-panel">
+      <div class="panel-header">
+        <div class="panel-title">
+          <span>🎯</span> 我的條件與落點設定
+        </div>
+        <button class="btn btn-outline" id="btn-reset-filters" style="font-size: 0.75rem; padding: 4px 8px;">
+          重置條件
+        </button>
+      </div>
+
+      <!-- 目標學群 -->
+      <div class="filter-group">
+        <label class="filter-label" for="filter-category">目標學群類別</label>
+        <select class="select-custom" id="filter-category"></select>
+      </div>
+
+      <!-- 身分與資歷背景 -->
+      <div class="filter-group">
+        <label class="filter-label" for="filter-background">個人教育資歷 / 身分</label>
+        <select class="select-custom" id="filter-background"></select>
+      </div>
+
+      <!-- APCS 程式檢定 (資訊電資組關鍵) -->
+      <div class="filter-group">
+        <label class="filter-label">APCS 程式檢定 (若無請填0)</label>
+        <div class="apcs-grid">
+          <div class="apcs-box">
+            <label for="apcs-concept">觀念題級分</label>
+            <select class="select-custom" id="apcs-concept">
+              <option value="0">未測驗 / 0級</option>
+              <option value="1">1 級分</option>
+              <option value="2">2 級分</option>
+              <option value="3">3 級分</option>
+              <option value="4">4 級分</option>
+              <option value="5">5 頂級分</option>
+            </select>
+          </div>
+          <div class="apcs-box">
+            <label for="apcs-practice">實作題級分</label>
+            <select class="select-custom" id="apcs-practice">
+              <option value="0">未測驗 / 0級</option>
+              <option value="1">1 級分</option>
+              <option value="2">2 級分</option>
+              <option value="3">3 級分</option>
+              <option value="4">4 級分</option>
+              <option value="5">5 頂級分</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- 專業競賽與特殊事證 -->
+      <div class="filter-group">
+        <label class="filter-label">特殊獲獎、科展與探究成果</label>
+        <div class="checkbox-list" id="competitions-checkboxes"></div>
+      </div>
+
+      <!-- 外語檢定能力 -->
+      <div class="filter-group">
+        <label class="filter-label">外語檢定與稀有語種</label>
+        <div class="checkbox-list" id="languages-checkboxes"></div>
+      </div>
+
+      <!-- 學校層級偏好 -->
+      <div class="filter-group">
+        <label class="filter-label" for="filter-tier">學校層級</label>
+        <select class="select-custom" id="filter-tier"></select>
+      </div>
+
+      <!-- 地區偏好 -->
+      <div class="filter-group">
+        <label class="filter-label" for="filter-region">所在地區</label>
+        <select class="select-custom" id="filter-region"></select>
+      </div>
+    </aside>
+
+    <!-- 右側：結果展示區 -->
+    <section class="results-area">
+      <!-- 頂部搜尋與排序列 -->
+      <div class="results-header-bar">
+        <div class="search-input-wrapper">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="search-input" placeholder="搜尋學校、科系、清大科藝、中正資傳、元智、APCS、拾穗、百川...">
+        </div>
+        <div class="sort-group">
+          <label for="sort-select" style="font-size: 0.8125rem; font-weight: 600; color: var(--text-secondary);">排序方式：</label>
+          <select class="select-custom" id="sort-select" style="width: auto;">
+            <option value="fit">適配度契合評分 (高至低)</option>
+            <option value="quota114">114 最新招收名額 (多至少)</option>
+            <option value="growth">近三年名額成長幅度 (大至小)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- 時程快報提示條 -->
+      <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 10px 16px; font-size: 0.8125rem; color: #166534; display: flex; align-items: center; justify-content: space-between;">
+        <div>
+          📢 <strong>時程進度提醒</strong>：現正進入<strong>各大學特選簡章公告與資料準備期</strong>（每年約 9 月中下旬至 10 月初陸續公告，10 月中旬全面開放線上報名）。
+        </div>
+        <button class="btn btn-outline" style="font-size: 0.75rem; padding: 2px 8px; border-color: #86efac; color: #15803d; background: white;" onclick="openScheduleModal()">
+          查看歷年日期對照 ➔
+        </button>
+      </div>
+
+      <!-- 活躍篩選條件與命中統計 -->
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+        <div class="active-filters" id="active-filter-chips"></div>
+        <div style="font-size: 0.875rem; color: var(--text-secondary);">
+          共找到 <strong id="results-count" style="color: var(--primary);">0</strong> 個符合校系組
+        </div>
+      </div>
+
+      <!-- 校系卡片網格 -->
+      <div class="cards-grid" id="cards-container"></div>
+    </section>
+  </main>
+
+  <!-- 全國歷年重要日程與推估 Modal -->
+  <div class="modal-overlay" id="schedule-modal" onclick="if(event.target === this) closeModal('schedule-modal')">
+    <div class="modal-content" style="max-width: 900px;">
+      <div class="modal-header">
+        <h3 style="font-size: 1.1rem; font-weight: 700;">📅 全國大學特殊選才歷年重要時程演變與今年日期推估</h3>
+        <button class="btn btn-outline" style="padding: 4px 8px;" onclick="closeModal('schedule-modal')">✕</button>
+      </div>
+      <div class="modal-body" id="modal-schedule-body"></div>
+    </div>
+  </div>
+
+  <!-- 校系詳細資訊 Modal -->
+  <div class="modal-overlay" id="detail-modal" onclick="if(event.target === this) closeModal('detail-modal')">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 style="font-size: 1.1rem; font-weight: 700;">校系特殊選才詳細規範、歷年時程與錄取分析</h3>
+        <button class="btn btn-outline" style="padding: 4px 8px;" onclick="closeModal('detail-modal')">✕</button>
+      </div>
+      <div class="modal-body" id="modal-detail-content"></div>
+    </div>
+  </div>
+
+  <!-- 志願收藏清單 Modal -->
+  <div class="modal-overlay" id="bookmarks-modal" onclick="if(event.target === this) closeModal('bookmarks-modal')">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 style="font-size: 1.1rem; font-weight: 700;">★ 我的目標志願清單</h3>
+        <button class="btn btn-outline" style="padding: 4px 8px;" onclick="closeModal('bookmarks-modal')">✕</button>
+      </div>
+      <div class="modal-body" id="modal-bookmarks-body"></div>
+    </div>
+  </div>
+
+  <!-- 橫向對比 Modal -->
+  <div class="modal-overlay" id="compare-modal" onclick="if(event.target === this) closeModal('compare-modal')">
+    <div class="modal-content" style="max-width: 1040px;">
+      <div class="modal-header">
+        <h3 style="font-size: 1.1rem; font-weight: 700;">⚖️ 校系橫向詳細對比</h3>
+        <button class="btn btn-outline" style="padding: 4px 8px;" onclick="closeModal('compare-modal')">✕</button>
+      </div>
+      <div class="modal-body" id="modal-compare-body"></div>
+    </div>
+  </div>
+
+  <!-- 資料庫與腳本引入 -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+[
+  {
+    "id": "nthu-shisui",
+    "school": "國立清華大學",
+    "dept": "清華學院學士班（拾穗計畫）",
+    "system": "全校跨領域不分系",
+    "category": "cross_discipline",
+    "categoryName": "跨領域與不分系",
+    "tier": "top",
+    "tierName": "頂尖頂大",
+    "region": "north",
+    "regionName": "北部",
+    "quota": { "112": 63, "113": 65, "114": 67 },
+    "features": [
+      "大一不分系，大二依志向自由修讀全校雙專長或自組專長",
+      "全台最早推動且名額最多之旗艦特選計畫",
+      "配置專屬學院導師，學分彈性極高，支援客製化學習計畫"
+    ],
+    "requirements": {
+      "minCondition": "具備強烈自主學習動機、特殊專長、實驗教育或不同教育資歷者",
+      "types": ["experimental", "autodidact", "special_talent", "disadvantaged", "overseas"],
+      "apcsPractice": 0,
+      "competitions": ["olympiad", "science_fair", "wang_hong", "literature", "debate_mun", "startup_patent", "art_design", "info_contest", "security_ctf"],
+      "languages": ["any_high"]
+    },
+    "evaluation": {
+      "writtenPercent": 50,
+      "interviewPercent": 50,
+      "examPercent": 0,
+      "description": "初試審查自傳、特殊事證與未來四年學習計畫書；複試採深度個人口試與批判思考評析。"
+    },
+    "schedule": {
+      "history": {
+        "112": { "apply": "111.10.18 ~ 10.25", "exam": "111.11.19", "result": "111.12.08" },
+        "113": { "apply": "112.10.17 ~ 10.24", "exam": "112.11.18", "result": "112.12.07" },
+        "114": { "apply": "113.10.15 ~ 10.22", "exam": "113.11.16", "result": "113.12.06" }
+      },
+      "currentStatus": "即將報名",
+      "estimated": {
+        "brochure": "9 月中下旬公告簡章",
+        "apply": "10 月中旬 (約 10/14 ~ 10/22)",
+        "exam": "11 月中旬進行複試口試",
+        "result": "12 月初放榜"
+      }
+    },
+    "admissionStandard": "錄取標準極度看重「在特定領域有超越常規的高中探索深度」，不限特定學科，無論自學、藝術、文史、生態、程式或社會倡議均有錄取案例。口試會嚴格檢驗自學計畫之可行性與真實性。",
+    "tags": ["拾穗計畫", "大一不分系", "自學首選", "雙專長", "自主學習"],
+    "officialUrl": "https://admission.nthu.edu.tw/"
+  },
+  {
+    "id": "nycu-baichuan",
+    "school": "國立陽明交通大學",
+    "dept": "百川學士學位學程",
+    "system": "全校跨領域不分系",
+    "category": "cross_discipline",
+    "categoryName": "跨領域與不分系",
+    "tier": "top",
+    "tierName": "頂尖頂大",
+    "region": "north",
+    "regionName": "北部",
+    "quota": { "112": 41, "113": 43, "114": 45 },
+    "features": [
+      "結合陽明交大電資、生醫、人文、法政與管理跨域能量",
+      "打破傳統系所必修限制，客製化微學程與專案導向學習",
+      "鼓勵文理交融、科技創新、社會設計與跨界整合"
+    ],
+    "requirements": {
+      "minCondition": "具特殊專長、跨領域潛力、自主學習、創新創業或自學實驗教育經歷",
+      "types": ["experimental", "autodidact", "special_talent", "disadvantaged"],
+      "apcsPractice": 0,
+      "competitions": ["science_fair", "wang_hong", "startup_patent", "art_design", "info_contest", "debate_mun"],
+      "languages": ["any_high"]
+    },
+    "evaluation": {
+      "writtenPercent": 40,
+      "interviewPercent": 60,
+      "examPercent": 0,
+      "description": "書面審查個人卓越成果與學習計畫；複試包含個人口試與跨領域思維團體面談。"
+    },
+    "schedule": {
+      "history": {
+        "112": { "apply": "111.10.14 ~ 10.21", "exam": "111.11.12", "result": "111.12.02" },
+        "113": { "apply": "112.10.13 ~ 10.20", "exam": "112.11.11", "result": "112.12.01" },
+        "114": { "apply": "113.10.11 ~ 10.18", "exam": "113.11.09", "result": "113.11.29" }
+      },
+      "currentStatus": "即將報名",
+      "estimated": {
+        "brochure": "9 月中旬公告簡章",
+        "apply": "10 月上中旬 (約 10/11 ~ 10/18)",
+        "exam": "11 月上旬進行複試口試",
+        "result": "11 月底 / 12 月初放榜"
+      }
+    },
+    "admissionStandard": "尋找具備跳脫框架思維的開創型人才。備審需具體呈現作品集與專題產出；面試重解決未知問題的應變能力與跨領域自驅力。",
+    "tags": ["百川計畫", "跨領域微學程", "科技與人文", "創新創業", "設計整合"],
+    "officialUrl": "https://baichuan.nycu.edu.tw/"
+  },
+  {
+    "id": "nthu-arts-tech",
+    "school": "國立清華大學",
+    "dept": "藝術學院學士班（科技藝術組 / 音樂科技）",
+    "system": "科技藝術跨領域專班",
+    "category": "art_design",
+    "categoryName": "藝術設計與建築",
+    "tier": "top",
+    "tierName": "頂尖頂大",
+    "region": "north",
+    "regionName": "北部",
+    "quota": { "112": 3, "113": 4, "114": 4 },
+    "features": [
+      "全台首屈一指 Tech-Art 科技藝術研發重鎮，專攻程式設計 ✕ 音樂聲音 ✕ 視覺互動",
+      "探索 AI 生成音樂、聲音裝置、TouchDesigner 互動運算與 XR 沉浸式體驗",
+      "大二自由跨選修清大資工、電資學院核心高階課程，資源充沛"
+    ],
+    "requirements": {
+      "minCondition": "具備音樂/鋼琴素養、數位藝術、科展研究、程式設計或科技藝術跨領域探究實績",
+      "types": ["general", "special_talent", "autodidact", "experimental"],
+      "apcsPractice": 0,
+      "competitions": ["science_fair", "art_design", "info_contest", "wang_hong"],
+      "languages": []
+    },
+    "evaluation": {
+      "writtenPercent": 50,
+      "interviewPercent": 50,
+      "examPercent": 0,
+      "description": "初審作品集與探究報告（佔50%）；複試採現場作品解說、科技美學理念與專業口試（佔50%）。"
+    },
+    "schedule": {
+      "history": {
+        "112": { "apply": "111.10.18 ~ 10.25", "exam": "111.11.19", "result": "111.12.08" },
+        "113": { "apply": "112.10.17 ~ 10.24", "exam": "112.11.18", "result": "112.12.07" },
+        "114": { "apply": "113.10.15 ~ 10.22", "exam": "113.11.16", "result": "113.12.06" }
+      },
+      "currentStatus": "即將報名",
+      "estimated": {
+        "brochure": "9 月中旬公布最新招生簡章",
+        "apply": "10 月中旬 (約 10/14 ~ 10/22 線上報名繳件)",
+        "exam": "11 月中旬 (約 11/15~11/17 複試口試)",
+        "result": "12 月初公告正備取名單"
+      }
+    },
+    "admissionStandard": "極度偏好「懂音樂又懂程式」的跨界考生。若有高中科展佳作作為科學實證背書，搭配鋼琴檢定與自學程式作品，契合度極高！口試重視對聲音與視覺互動的思考深度。",
+    "tags": ["清大科技藝術", "音樂科技", "跨領域首選", "互動程式", "TouchDesigner", "AI藝術"],
+    "officialUrl": "https://ipta.site.nthu.edu.tw/"
+  },
+  {
+    "id": "ccu-ic",
+    "school": "國立中正大學",
+    "dept": "資訊傳播學系",
+    "system": "數位媒體與傳播特選",
+    "category": "cs_ai_security",
+    "categoryName": "資訊/資安/電資",
+    "tier": "mid_four",
+    "tierName": "中字輩國立",
+    "region": "central",
+    "regionName": "中部",
+    "quota": { "112": 2, "113": 2, "114": 2 },
+    "features": [
+      "軟體工程、全端開發、數位音訊視訊工程、人機互動（HCI/UI/UX）三合一",
+      "中字輩國立名牌，重視將程式技術落地於新媒體傳播與產品設計",
+      "備取遞補名額多，錄取機會優渥"
+    ],
+    "requirements": {
+      "minCondition": "具備高中科展成果、網頁/APP程式開發、影音多媒體創作或資訊傳播專案成果者",
+      "types": ["general", "special_talent", "autodidact"],
+      "apcsPractice": 0,
+      "competitions": ["science_fair", "info_contest", "art_design", "literature"],
+      "languages": []
+    },
+    "evaluation": {
+      "writtenPercent": 50,
+      "interviewPercent": 50,
+      "examPercent": 0,
+      "description": "書面資料詳細審核專題研究歷程（科展報告極佳）；口試考察邏輯思維與傳播科技應用。"
+    },
+    "schedule": {
+      "history": {
+        "112": { "apply": "111.10.25 ~ 11.07", "exam": "111.11.26", "result": "111.12.16" },
+        "113": { "apply": "112.10.24 ~ 11.06", "exam": "112.11.25", "result": "112.12.15" },
+        "114": { "apply": "113.10.22 ~ 11.04", "exam": "113.11.23", "result": "113.12.13" }
+      },
+      "currentStatus": "簡章公告準備中",
+      "estimated": {
+        "brochure": "9 月下旬公布簡章",
+        "apply": "10 月下旬至 11 月初 (約 10/21 ~ 11/04)",
+        "exam": "11 月下旬 (約 11/22 前後面試)",
+        "result": "12 月中旬放榜"
+      }
+    },
+    "admissionStandard": "不硬性要求頂尖 APCS，非常重視學生在高中階段是否有完整的「科學探究與專案成果」。台中市高中科展佳作是書審的強大加分項，口試時條理清晰說明實驗過程即可獲高分。",
+    "tags": ["中正資傳", "國立中字輩", "科展加分", "多媒體工程", "UIUX", "備取機會大"],
+    "officialUrl": "https://ccuic.ccu.edu.tw/"
+  },
+  {
+    "id": "yzu-ic",
+    "school": "元智大學",
+    "dept": "資訊傳播學系（科技組 / 設計組）",
+    "system": "多媒體科技特選",
+    "category": "cs_ai_security",
+    "categoryName": "資訊/資安/電資",
+    "tier": "private_top",
+    "tierName": "優質私立",
+    "region": "north",
+    "regionName": "北部",
+    "quota": { "112": 4, "113": 5, "114": 5 },
+    "features": [
+      "台灣數位多媒體、遊戲設計（Unity/Unreal Engine）、VR/AR 互動先驅校系",
+      "業界口碑極佳，校友遍布遊戲大廠、新媒體互動科技公司",
+      "名額充裕，提供專案與科展得獎新生高額入學獎學金"
+    ],
+    "requirements": {
+      "minCondition": "高中具備科展作品、遊戲製作、程式設計、互動多媒體或數位藝術專長",
+      "types": ["general", "special_talent", "autodidact"],
+      "apcsPractice": 0,
+      "competitions": ["science_fair", "info_contest", "art_design", "startup_patent"],
+      "languages": []
+    },
+    "evaluation": {
+      "writtenPercent": 50,
+      "interviewPercent": 50,
+      "examPercent": 0,
+      "description": "書面審查個人探究歷程與作品集；口試了解創作熱忱、除錯經驗與未來修課目標。"
+    },
+    "schedule": {
+      "history": {
+        "112": { "apply": "111.10.17 ~ 11.14", "exam": "111.11.26", "result": "111.12.02" },
+        "113": { "apply": "112.10.16 ~ 11.13", "exam": "112.11.25", "result": "112.12.01" },
+        "114": { "apply": "113.10.14 ~ 11.11", "exam": "113.11.23", "result": "113.11.29" }
+      },
+      "currentStatus": "即將開放報名",
+      "estimated": {
+        "brochure": "9 月中旬正式公布簡章",
+        "apply": "10 月中旬至 11 月上旬 (約 10/14 ~ 11/11，報名期約一個月)",
+        "exam": "11 月下旬 (約 11/22 前後面試)",
+        "result": "11 月底 / 12 月初搶先放榜"
+      }
+    },
+    "admissionStandard": "高中組科展佳作在此系所幾乎具備壓倒性的錄取優勢（錄取勝率 90% 以上）。名額多且放榜早，非常適合作為提早上岸的第一道堅實防線。",
+    "tags": ["元智資傳", "遊戲開發首選", "高額獎學金", "超穩保底", "UnityUnreal", "名額多"],
+    "officialUrl": "https://www.infocom.yzu.edu.tw/"
+  }
+]

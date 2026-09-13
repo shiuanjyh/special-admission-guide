@@ -10,28 +10,6 @@
 * **藝術設計與建築學群**（北藝大新媒體、成大建築、實踐服裝等）
 * **生醫農學**（台大生科、長庚醫檢等）
 
----
-
-## 🚀 快速開始使用
-
-本網頁採用**零相依性（Zero Dependency）**設計，無需安裝 Node.js 或 npm，即可直接在任何瀏覽器中流暢運行！
-
-### 方法一：直接點擊開啟
-在檔案總管或 Finder 中找到專案目錄：
-```
-/Users/james/.gemini/antigravity/scratch/special-admission-navigator
-```
-直接雙擊點擊 **`index.html`**，即可在 Chrome、Safari、Edge 或 Firefox 中開啟使用！
-
-### 方法二：透過本機 HTTP 伺服器開啟（若環境支援）
-您也可以在專案目錄下開啟終端機執行：
-```bash
-python3 -m http.server 8000
-```
-接著在瀏覽器造訪 `http://localhost:8000` 即可。
-
----
-
 ## 🌟 核心功能說明
 
 ### 1. 🎯 條件適配度媒合引擎 (Fit Score Matcher)

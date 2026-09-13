@@ -157,11 +157,15 @@ function bindEvents() {
   // 手機版篩選面板展開/收合開關
   const mobileToggleBtn = document.getElementById("btn-toggle-filters");
   const matcherPanel = document.getElementById("matcher-panel");
-  const arrowEl = document.getElementById("toggle-filter-arrow");
+  const closePanelBtn = document.getElementById("btn-close-panel");
   if (mobileToggleBtn && matcherPanel) {
     mobileToggleBtn.addEventListener("click", () => {
-      const isOpen = matcherPanel.classList.toggle("is-open");
-      if (arrowEl) arrowEl.innerText = isOpen ? "▲" : "▼";
+      matcherPanel.classList.toggle("is-open");
+    });
+  }
+  if (closePanelBtn && matcherPanel) {
+    closePanelBtn.addEventListener("click", () => {
+      matcherPanel.classList.remove("is-open");
     });
   }
 

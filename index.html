@@ -8,31 +8,35 @@
 </head>
 <body>
 
-  <!-- 頂部導航欄 -->
+  <!-- 超精簡頂部導航欄 (單行、緊湊、極省空間) -->
   <nav class="navbar">
     <div class="nav-container">
       <div class="brand">
         <div class="brand-icon">特</div>
-        <div>
-          <div class="brand-title">大學特殊選才落點探索與數據導航</div>
-          <div class="brand-subtitle">112～114 學年度全台指標校系名額、歷年重要日程推估與甄選策略</div>
+        <div class="brand-text">
+          <span class="brand-title">特選落點導航</span>
+          <span class="badge badge-year">112-114</span>
         </div>
       </div>
+
       <div class="nav-actions">
-        <button class="btn btn-outline" id="btn-view-schedule" style="background: #eff6ff; color: #1e40af; border-color: #bfdbfe;">
-          📅 歷年重要日程與推估
+        <button class="btn btn-nav btn-schedule" id="btn-view-schedule" title="查看歷年重要日程與推估">
+          <span>📅</span><span class="nav-btn-text">時程表</span>
         </button>
-        <button class="btn btn-outline" id="btn-view-compare">
-          ⚖️ 橫向對比 (<span id="compare-count">0</span>)
+        <button class="btn btn-nav" id="btn-view-compare" title="查看橫向對比">
+          <span>⚖️</span><span class="nav-btn-text">對比</span>
+          <span class="badge badge-count" id="compare-count">0</span>
         </button>
-        <button class="btn btn-outline" id="btn-view-bookmarks">
-          ★ 志願收藏 (<span id="bookmark-count">0</span>)
+        <button class="btn btn-nav" id="btn-view-bookmarks" title="查看志願收藏清單">
+          <span>★</span><span class="nav-btn-text">收藏</span>
+          <span class="badge badge-count" id="bookmark-count">0</span>
         </button>
-        <button class="btn btn-outline" id="btn-export-data" title="匯出個人條件設定與收藏志願">
-          📤 匯出
+        <div class="nav-divider"></div>
+        <button class="btn btn-icon" id="btn-export-data" title="匯出個人條件設定與收藏">
+          <span>📤</span>
         </button>
-        <button class="btn btn-outline" id="btn-import-trigger" title="匯入已儲存之設定檔">
-          📥 匯入
+        <button class="btn btn-icon" id="btn-import-trigger" title="匯入已儲存之設定檔">
+          <span>📥</span>
         </button>
         <input type="file" id="file-import" accept=".json" style="display: none;">
       </div>
@@ -42,26 +46,20 @@
   <!-- 主畫面配置 -->
   <main class="main-layout">
     
-    <!-- 手機版篩選切換按鈕 (只在手機/平板顯示) -->
-    <div class="mobile-filter-bar" id="mobile-filter-bar">
-      <button class="btn btn-outline mobile-toggle-btn" id="btn-toggle-filters">
-        <span>🎯 條件篩選與落點設定</span>
-        <div style="display: flex; align-items: center; gap: 6px;">
-          <span class="badge" id="mobile-filter-badge" style="background: #e2e8f0; color: #334155;">展開篩選</span>
-          <span id="toggle-filter-arrow">▼</span>
-        </div>
-      </button>
-    </div>
-
-    <!-- 左側：個人條件與偏才背景設定 -->
+    <!-- 左側：個人條件與偏才背景設定 (桌面常駐，手機抽屜式折疊) -->
     <aside class="matcher-panel" id="matcher-panel">
       <div class="panel-header">
         <div class="panel-title">
-          <span>🎯</span> 我的條件與落點設定
+          <span>🎯</span> 條件與落點設定
         </div>
-        <button class="btn btn-outline" id="btn-reset-filters" style="font-size: 0.75rem; padding: 4px 8px;">
-          重置條件
-        </button>
+        <div style="display: flex; gap: 6px;">
+          <button class="btn btn-outline btn-sm" id="btn-reset-filters">
+            重置
+          </button>
+          <button class="btn btn-outline btn-sm mobile-close-panel" id="btn-close-panel">
+            ✕ 關閉
+          </button>
+        </div>
       </div>
 
       <!-- 目標學群 -->
@@ -132,37 +130,42 @@
 
     <!-- 右側：結果展示區 -->
     <section class="results-area">
-      <!-- 頂部搜尋與排序列 -->
-      <div class="results-header-bar">
+
+      <!-- 一體化搜尋、篩選切換與排序控制列 (緊湊單行，極度省空間) -->
+      <div class="search-toolbar">
         <div class="search-input-wrapper">
           <span class="search-icon">🔍</span>
-          <input type="text" id="search-input" placeholder="搜尋學校、科系、清大科藝、中正資傳、元智、APCS、拾穗、百川...">
+          <input type="text" id="search-input" placeholder="搜尋校系、APCS、清大科藝、中正資傳、元智...">
         </div>
-        <div class="sort-group">
-          <label for="sort-select" style="font-size: 0.8125rem; font-weight: 600; color: var(--text-secondary);">排序方式：</label>
-          <select class="select-custom" id="sort-select" style="width: auto;">
-            <option value="fit">適配度契合評分 (高至低)</option>
-            <option value="quota114">114 最新招收名額 (多至少)</option>
-            <option value="growth">近三年名額成長幅度 (大至小)</option>
+
+        <button class="btn btn-outline filter-toggle-btn" id="btn-toggle-filters" title="展開條件篩選面板">
+          <span>🎯 篩選</span>
+          <span class="badge filter-count-badge" id="mobile-filter-badge">0</span>
+        </button>
+
+        <div class="sort-wrapper">
+          <select class="select-custom sort-select" id="sort-select" title="排序方式">
+            <option value="fit">適配度最高</option>
+            <option value="quota114">114名額最多</option>
+            <option value="growth">名額成長最大</option>
           </select>
         </div>
       </div>
 
-      <!-- 時程快報提示條 -->
-      <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 10px 16px; font-size: 0.8125rem; color: #166534; display: flex; align-items: center; justify-content: space-between;">
-        <div>
-          📢 <strong>時程進度提醒</strong>：現正進入<strong>各大學特選簡章公告與資料準備期</strong>（每年約 9 月中下旬至 10 月初陸續公告，10 月中旬全面開放線上報名）。
-        </div>
-        <button class="btn btn-outline" style="font-size: 0.75rem; padding: 2px 8px; border-color: #86efac; color: #15803d; background: white;" onclick="openScheduleModal()">
-          查看歷年日期對照 ➔
-        </button>
+      <!-- 精簡可關閉的時程跑馬提示條 (高度僅28px) -->
+      <div class="announcement-pill" id="announcement-pill">
+        <span class="pill-icon">📢</span>
+        <span class="pill-text" onclick="openScheduleModal()">
+          現正處於 114 特選簡章公布與報名備戰期（點此看各校歷年日期對照）➔
+        </span>
+        <button class="pill-close" onclick="document.getElementById('announcement-pill').style.display='none'" title="關閉提示">✕</button>
       </div>
 
-      <!-- 活躍篩選條件與命中統計 -->
-      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+      <!-- 活躍篩選標籤與數量列 -->
+      <div class="filter-summary-row">
         <div class="active-filters" id="active-filter-chips"></div>
-        <div style="font-size: 0.875rem; color: var(--text-secondary);">
-          共找到 <strong id="results-count" style="color: var(--primary);">0</strong> 個符合校系組
+        <div class="results-count-badge">
+          符合校系：<strong id="results-count">0</strong> 所
         </div>
       </div>
 
@@ -175,8 +178,8 @@
   <div class="modal-overlay" id="schedule-modal" onclick="if(event.target === this) closeModal('schedule-modal')">
     <div class="modal-content" style="max-width: 900px;">
       <div class="modal-header">
-        <h3 style="font-size: 1.1rem; font-weight: 700;">📅 全國大學特殊選才歷年重要時程演變與今年日期推估</h3>
-        <button class="btn btn-outline" style="padding: 4px 8px;" onclick="closeModal('schedule-modal')">✕</button>
+        <h3 style="font-size: 1.05rem; font-weight: 700;">📅 全國大學特殊選才歷年重要時程演變與今年日期推估</h3>
+        <button class="btn btn-outline btn-sm" onclick="closeModal('schedule-modal')">✕</button>
       </div>
       <div class="modal-body" id="modal-schedule-body"></div>
     </div>
@@ -186,8 +189,8 @@
   <div class="modal-overlay" id="detail-modal" onclick="if(event.target === this) closeModal('detail-modal')">
     <div class="modal-content">
       <div class="modal-header">
-        <h3 style="font-size: 1.1rem; font-weight: 700;">校系特殊選才詳細規範、歷年時程與錄取分析</h3>
-        <button class="btn btn-outline" style="padding: 4px 8px;" onclick="closeModal('detail-modal')">✕</button>
+        <h3 style="font-size: 1.05rem; font-weight: 700;">校系特殊選才詳細規範、歷年時程與錄取分析</h3>
+        <button class="btn btn-outline btn-sm" onclick="closeModal('detail-modal')">✕</button>
       </div>
       <div class="modal-body" id="modal-detail-content"></div>
     </div>
@@ -197,8 +200,8 @@
   <div class="modal-overlay" id="bookmarks-modal" onclick="if(event.target === this) closeModal('bookmarks-modal')">
     <div class="modal-content">
       <div class="modal-header">
-        <h3 style="font-size: 1.1rem; font-weight: 700;">★ 我的目標志願清單</h3>
-        <button class="btn btn-outline" style="padding: 4px 8px;" onclick="closeModal('bookmarks-modal')">✕</button>
+        <h3 style="font-size: 1.05rem; font-weight: 700;">★ 我的目標志願清單</h3>
+        <button class="btn btn-outline btn-sm" onclick="closeModal('bookmarks-modal')">✕</button>
       </div>
       <div class="modal-body" id="modal-bookmarks-body"></div>
     </div>
@@ -208,8 +211,8 @@
   <div class="modal-overlay" id="compare-modal" onclick="if(event.target === this) closeModal('compare-modal')">
     <div class="modal-content" style="max-width: 1040px;">
       <div class="modal-header">
-        <h3 style="font-size: 1.1rem; font-weight: 700;">⚖️ 校系橫向詳細對比</h3>
-        <button class="btn btn-outline" style="padding: 4px 8px;" onclick="closeModal('compare-modal')">✕</button>
+        <h3 style="font-size: 1.05rem; font-weight: 700;">⚖️ 校系橫向詳細對比</h3>
+        <button class="btn btn-outline btn-sm" onclick="closeModal('compare-modal')">✕</button>
       </div>
       <div class="modal-body" id="modal-compare-body"></div>
     </div>

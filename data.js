@@ -43,7 +43,7 @@ const ADMISSION_DATABASE = [
         "113": { apply: "112.10.17 ~ 10.24", exam: "112.11.18", result: "112.12.07" },
         "114": { apply: "113.10.15 ~ 10.22", exam: "113.11.16", result: "113.12.06" }
       },
-      currentStatus: "即將報名",
+      currentStatus: "各校簡章陸續公告中",
       estimated: {
         brochure: "9 月中下旬公告簡章",
         apply: "10 月中旬 (約 10/14 ~ 10/22)",
@@ -91,7 +91,7 @@ const ADMISSION_DATABASE = [
         "113": { apply: "112.10.13 ~ 10.20", exam: "112.11.11", result: "112.12.01" },
         "114": { apply: "113.10.11 ~ 10.18", exam: "113.11.09", result: "113.11.29" }
       },
-      currentStatus: "即將報名",
+      currentStatus: "各校簡章陸續公告中",
       estimated: {
         brochure: "9 月中旬公告簡章",
         apply: "10 月上中旬 (約 10/11 ~ 10/18)",
@@ -139,7 +139,7 @@ const ADMISSION_DATABASE = [
         "113": { apply: "112.10.19 ~ 10.30", exam: "112.11.24", result: "112.12.08" },
         "114": { apply: "113.10.17 ~ 10.28", exam: "113.11.22", result: "113.12.06" }
       },
-      currentStatus: "簡章公告中",
+      currentStatus: "各校簡章陸續公告中",
       estimated: {
         brochure: "9 月下旬公告簡章",
         apply: "10 月中下旬 (約 10/16 ~ 10/27)",
@@ -187,7 +187,7 @@ const ADMISSION_DATABASE = [
         "113": { apply: "112.10.12 ~ 10.23", exam: "112.11.17", result: "112.12.05" },
         "114": { apply: "113.10.08 ~ 10.21", exam: "113.11.15", result: "113.12.03" }
       },
-      currentStatus: "簡章公告中",
+      currentStatus: "各校簡章陸續公告中",
       estimated: {
         brochure: "9 月中旬公布簡章",
         apply: "10 月上旬 ~ 中旬 (約 10/08 ~ 10/20)",
@@ -239,7 +239,7 @@ const ADMISSION_DATABASE = [
         "113": { apply: "112.10.17 ~ 10.24", exam: "112.11.18", result: "112.12.07" },
         "114": { apply: "113.10.15 ~ 10.22", exam: "113.11.16", result: "113.12.06" }
       },
-      currentStatus: "即將報名",
+      currentStatus: "各校簡章陸續公告中",
       estimated: {
         brochure: "9 月中旬公布最新招生簡章",
         apply: "10 月中旬 (約 10/14 ~ 10/22 線上報名繳件)",
@@ -287,7 +287,7 @@ const ADMISSION_DATABASE = [
         "113": { apply: "112.10.24 ~ 11.06", exam: "112.11.25", result: "112.12.15" },
         "114": { apply: "113.10.22 ~ 11.04", exam: "113.11.23", result: "113.12.13" }
       },
-      currentStatus: "簡章公告準備中",
+      currentStatus: "各校簡章陸續公告中",
       estimated: {
         brochure: "9 月下旬公布簡章",
         apply: "10 月下旬至 11 月初 (約 10/21 ~ 11/04)",
@@ -335,7 +335,7 @@ const ADMISSION_DATABASE = [
         "113": { apply: "112.10.16 ~ 11.13", exam: "112.11.25", result: "112.12.01" },
         "114": { apply: "113.10.14 ~ 11.11", exam: "113.11.23", result: "113.11.29" }
       },
-      currentStatus: "即將開放報名",
+      currentStatus: "各校簡章陸續公告中",
       estimated: {
         brochure: "9 月中旬正式公布簡章",
         apply: "10 月中旬至 11 月上旬 (約 10/14 ~ 11/11，報名期約一個月)",
@@ -387,7 +387,7 @@ const ADMISSION_DATABASE = [
         "113": { apply: "112.11.07 ~ 11.14", exam: "112.12.02", result: "112.12.22" },
         "114": { apply: "113.11.05 ~ 11.12", exam: "113.11.30", result: "113.12.20" }
       },
-      currentStatus: "簡章公告準備中",
+      currentStatus: "各校簡章陸續公告中",
       estimated: {
         brochure: "10 月上旬公告",
         apply: "11 月上旬 (約 11/04 ~ 11/12)",
@@ -435,7 +435,7 @@ const ADMISSION_DATABASE = [
         "113": { apply: "112.10.13 ~ 10.20", exam: "112.11.11", result: "112.12.01" },
         "114": { apply: "113.10.11 ~ 10.18", exam: "113.11.09", result: "113.11.29" }
       },
-      currentStatus: "即將開放報名",
+      currentStatus: "各校簡章陸續公告中",
       estimated: {
         brochure: "9 月中旬公告",
         apply: "10 月上中旬 (約 10/11 ~ 10/18)",
@@ -483,7 +483,7 @@ const ADMISSION_DATABASE = [
         "113": { apply: "112.10.17 ~ 10.24", exam: "112.11.18", result: "112.12.07" },
         "114": { apply: "113.10.15 ~ 10.22", exam: "113.11.16", result: "113.12.06" }
       },
-      currentStatus: "即將報名",
+      currentStatus: "各校簡章陸續公告中",
       estimated: {
         brochure: "9 月中旬公布簡章",
         apply: "10 月中旬 (約 10/14 ~ 10/22)",
@@ -531,7 +531,7 @@ const ADMISSION_DATABASE = [
         "113": { apply: "112.10.19 ~ 10.30", exam: "112.11.24", result: "112.12.08" },
         "114": { apply: "113.10.17 ~ 10.28", exam: "113.11.22", result: "113.12.06" }
       },
-      currentStatus: "簡章公告中",
+      currentStatus: "各校簡章陸續公告中",
       estimated: {
         brochure: "9 月下旬公布簡章",
         apply: "10 月中下旬 (約 10/16 ~ 10/27)",
@@ -579,7 +579,7 @@ const ADMISSION_DATABASE = [
         "113": { apply: "112.10.24 ~ 11.02", exam: "112.11.25", result: "112.12.07" },
         "114": { apply: "113.10.22 ~ 10.31", exam: "113.11.23", result: "113.12.05" }
       },
-      currentStatus: "即將公告簡章",
+      currentStatus: "各校簡章陸續公告中",
       estimated: {
         brochure: "9 月下旬公布簡章",
         apply: "10 月下旬 (約 10/21 ~ 10/30)",
@@ -627,7 +627,7 @@ const ADMISSION_DATABASE = [
         "113": { apply: "112.10.24 ~ 11.06", exam: "112.11.25", result: "112.12.15" },
         "114": { apply: "113.10.22 ~ 11.04", exam: "113.11.23", result: "113.12.13" }
       },
-      currentStatus: "簡章公告準備中",
+      currentStatus: "各校簡章陸續公告中",
       estimated: {
         brochure: "9 月下旬公布簡章",
         apply: "10 月下旬至 11 月初 (約 10/21 ~ 11/04)",
@@ -675,7 +675,7 @@ const ADMISSION_DATABASE = [
         "113": { apply: "112.10.20 ~ 11.01", exam: "112.11.25", result: "112.12.08" },
         "114": { apply: "113.10.18 ~ 10.30", exam: "113.11.23", result: "113.12.06" }
       },
-      currentStatus: "簡章公告準備中",
+      currentStatus: "各校簡章陸續公告中",
       estimated: {
         brochure: "9 月下旬公布簡章",
         apply: "10 月中下旬 (約 10/17 ~ 10/29)",
@@ -723,7 +723,7 @@ const ADMISSION_DATABASE = [
         "113": { apply: "112.10.16 ~ 11.13", exam: "112.11.25", result: "112.12.01" },
         "114": { apply: "113.10.14 ~ 11.11", exam: "113.11.23", result: "113.11.29" }
       },
-      currentStatus: "即將開放報名",
+      currentStatus: "各校簡章陸續公告中",
       estimated: {
         brochure: "9 月中旬公布簡章",
         apply: "10 月中旬至 11 月上旬 (約 10/14 ~ 11/11)",
@@ -739,7 +739,7 @@ const ADMISSION_DATABASE = [
 
 // 全國特殊選才重要日程表與推估數據
 const NATIONAL_SCHEDULE = {
-  currentStatus: "現正處於各校簡章陸續公布與報名備戰黃金期",
+  currentStatus: "各校簡章陸續公告中",
   phases: [
     {
       name: "1. 各大學簡章公告期",

@@ -2,7 +2,7 @@
 <html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>大學特殊選才落點探索與數據導航 (112～114學年度)</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -42,8 +42,19 @@
   <!-- 主畫面配置 -->
   <main class="main-layout">
     
+    <!-- 手機版篩選切換按鈕 (只在手機/平板顯示) -->
+    <div class="mobile-filter-bar" id="mobile-filter-bar">
+      <button class="btn btn-outline mobile-toggle-btn" id="btn-toggle-filters">
+        <span>🎯 條件篩選與落點設定</span>
+        <div style="display: flex; align-items: center; gap: 6px;">
+          <span class="badge" id="mobile-filter-badge" style="background: #e2e8f0; color: #334155;">展開篩選</span>
+          <span id="toggle-filter-arrow">▼</span>
+        </div>
+      </button>
+    </div>
+
     <!-- 左側：個人條件與偏才背景設定 -->
-    <aside class="matcher-panel">
+    <aside class="matcher-panel" id="matcher-panel">
       <div class="panel-header">
         <div class="panel-title">
           <span>🎯</span> 我的條件與落點設定

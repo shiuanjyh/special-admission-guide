@@ -154,6 +154,17 @@ function bindEvents() {
   // 重置條件按鈕
   document.getElementById("btn-reset-filters").addEventListener("click", resetAllFilters);
 
+  // 手機版篩選面板展開/收合開關
+  const mobileToggleBtn = document.getElementById("btn-toggle-filters");
+  const matcherPanel = document.getElementById("matcher-panel");
+  const arrowEl = document.getElementById("toggle-filter-arrow");
+  if (mobileToggleBtn && matcherPanel) {
+    mobileToggleBtn.addEventListener("click", () => {
+      const isOpen = matcherPanel.classList.toggle("is-open");
+      if (arrowEl) arrowEl.innerText = isOpen ? "▲" : "▼";
+    });
+  }
+
   // 重要日程開關
   const scheduleBtn = document.getElementById("btn-view-schedule");
   if (scheduleBtn) {
@@ -347,6 +358,15 @@ function updateResultHeader(count) {
   chipsContainer.innerHTML = chips.map(text => `
     <span class="filter-chip">${text}</span>
   `).join("");
+
+  // 更新手機版篩選徽章
+  const mobileBadge = document.getElementById("mobile-filter-badge");
+  if (mobileBadge) {
+    const totalActive = chips.length;
+    mobileBadge.innerText = totalActive > 0 ? `已套用 ${totalActive} 項條件` : "展開篩選";
+    mobileBadge.style.background = totalActive > 0 ? "#2563eb" : "#e2e8f0";
+    mobileBadge.style.color = totalActive > 0 ? "#ffffff" : "#334155";
+  }
 }
 
 // 渲染科系卡片列表

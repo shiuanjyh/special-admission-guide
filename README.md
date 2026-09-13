@@ -10,6 +10,8 @@
 * **藝術設計與建築學群**（北藝大新媒體、成大建築、實踐服裝等）
 * **生醫農學**（台大生科、長庚醫檢等）
 
+https://shiuanjyh.github.io/special-admission-guide/
+
 ## 🌟 核心功能說明
 
 ### 1. 🎯 條件適配度媒合引擎 (Fit Score Matcher)
